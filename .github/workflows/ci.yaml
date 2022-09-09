@@ -1,6 +1,11 @@
 name: ci-golang-workflow
 #Evento
-on: [push]
+on:
+  # Configura evento de Pull Request
+  # Os Jobs serão executados para branche de develop apenas no evento de Pull Request
+  pull_request:
+    branches:
+      - develop
 jobs:
   checks-application:
     runs-on: ubuntu-latest
