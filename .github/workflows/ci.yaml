@@ -9,6 +9,10 @@ on:
 jobs:
   checks-application:
     runs-on: ubuntu-latest
+    # Strategy: Permite criação de variáveis
+    strategy:
+      matrix:
+        go: ['1.14','1.15']
     # Steps: Definem o conjuntos de ações e comandos para rodar no ambiente
       # Actions: são aplicações a serem rodadas em repositórios do próprio github
         # https://github.com/actions/checkout
@@ -21,6 +25,7 @@ jobs:
       # Prepara o ambiente go no ubuntu
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.15
+          # Utilização do strategy
+          go-version: ${{ matrix.go }}
       - run: go test
       - run: go run main.go
