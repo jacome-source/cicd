@@ -15,8 +15,10 @@ jobs:
       matrix:
         go: ['1.14','1.15']
     # Steps: Definem o conjuntos de ações e comandos para rodar no ambiente
-      # Actions: são aplicações a serem rodadas em repositórios do próprio github
-        # https://github.com/actions/checkout
+      # Actions: são aplicações a serem rodadas em containers do próprio github
+        # Actions podem ser tanto oficiais do github como de terceiros
+        # Pode ser necessário ler a documentação da aplicação
+        # Ex: https://github.com/actions/checkout
         # Actions são definidas usando palavra reservada 'uses'
       # Comandos: Comandos a serem rodados no ambiente
         # Comandos são definidas usando palavra reservada 'run'
