@@ -10,6 +10,7 @@ jobs:
   checks-application:
     runs-on: ubuntu-latest
     # Strategy: Permite criação de variáveis
+    # Variáveis irão disparar diferentes pipelines
     strategy:
       matrix:
         go: ['1.14','1.15']
