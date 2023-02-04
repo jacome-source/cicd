@@ -29,4 +29,4 @@ jobs:
           # Utilização do strategy
           go-version: ${{ matrix.go }}
       - run: go test
-      - run: go run main.go
+      - run: go run math.go
