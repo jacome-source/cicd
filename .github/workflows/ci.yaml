@@ -54,7 +54,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           # Não faz o push da imagem no docker hub
-          push: false
+          push: true
           # Nome da tag que será gerada
           # Se estivesse sendo publicada deveria seguir padrão do docker hub
-          tags: jacomesource/cicd:latest
+          tags: jacome/cicd:latest
