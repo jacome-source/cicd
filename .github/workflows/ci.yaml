@@ -56,5 +56,5 @@ jobs:
           # Não faz o push da imagem no docker hub
           push: true
           # Nome da tag que será gerada
-          # Se estivesse sendo publicada deveria seguir padrão do docker hub
+          # Se estiver sendo publicada deve seguir padrão do docker hub
           tags: jacome/cicd:latest
