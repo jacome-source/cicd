@@ -57,4 +57,4 @@ jobs:
           push: true
           # Nome da tag que será gerada
           # Se estivesse sendo publicada deveria seguir padrão do docker hub
-          tags: jacomesource/cicd:latest
+          tags: jacome/cicd:latest
