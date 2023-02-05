@@ -25,7 +25,9 @@ jobs:
         with:
           # Utilização do strategy
           go-version: 1.15
-      - run: go test
+        # Executa testes do go
+        # Roda cobertura de testes e salva em coverage.out para ser utilizado pelo sonarqube  
+      - run: go test --coverprofile=coverage.out
       - run: go run math.go
 
       # Configura ambiente docker no container do github
