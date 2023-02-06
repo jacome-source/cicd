@@ -30,6 +30,13 @@ jobs:
       - run: go test --coverprofile=coverage.out
       - run: go run math.go
 
+      # Scan do sonarcloud
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
       # Configura ambiente docker no container do github
       # QEMU configura o docker em diversas arquiteturas
       - name: Set up QEMU
